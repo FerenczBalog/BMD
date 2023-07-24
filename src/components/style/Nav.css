@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+    justify-content: flex-start;
+}
+    nav a{
+        padding: 0rem 1rem;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: white;
+    }
+        nav a:not(:first-child) {            
+            border-left: solid white 2px;
+        }
+        a:focus {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }

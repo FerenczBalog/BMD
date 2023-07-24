@@ -1,0 +1,166 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.log-reg-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: none;  
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  font-size: 1.2rem;
+} 
+  form:first-child {
+    justify-content: center;
+  }
+  form:last-child {
+    border-left: solid white 2px;
+  }
+
+  form input {
+    width: 80%;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: solid white 2px;
+    color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none !important;
+    padding-left: 10px;
+  }
+    input:hover {
+      border-bottom: none;
+      border-left: solid white 2px;
+    }
+    input:focus {
+      border-bottom: none;
+      border-left: solid white 2px;
+    }
+
+  form button {
+    background-color: transparent;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-left: solid white 2px;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 1rem;
+  }
+    form button:active {
+      border-color: blue;
+      color: blue;
+    }
+
+    form button:hover{
+      border-left: none;
+      border-bottom: solid white 2px; 
+    }
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+}
+  nav a{
+      padding: 0rem 1rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: white;
+  }
+      nav a:not(:first-child) {            
+          border-left: solid white 2px;
+      }
+      a:focus {
+          font-size: 1.5rem;
+          font-weight: 500;
+      }
+
+.Dashboard {
+  background-color: #1c1d1d;
+  width: 100%;
+  height: auto;
+}
+  .Dashboard header {
+    padding: 1rem;
+    height: 5rem;
+  }
+  
+  .Dashboard h2 {
+    margin: 0rem 1rem 1rem;
+    color: white;
+  }
+
+  .DashBody {
+    margin: auto;
+    min-height: calc(100vh - 7rem); /*  header height: 5rem + header padding: 2rem === header full height 7rem  */
+    background-color: rgba(0, 0, 0, 0.301);
+  }
+
+table {
+  color: white;
+  width: 90%;
+  margin: auto;
+}
+  th {
+    border-bottom: 2px solid white;
+  }
+  table, td {
+    text-align: center;
+    border-left: 2px solid white;
+    border-collapse: collapse;
+  }
+/*  PISZKOZAT  */
+
+  .OverviewBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    gap: 5rem;
+  }
+  .OverviewBody div {
+    margin: 25% auto;
+  }
+    .Bar {
+      width: 100%;
+    }
+    .Pie {
+      width: 25rem;
+    }

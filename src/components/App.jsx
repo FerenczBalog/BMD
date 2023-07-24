@@ -1,25 +1,43 @@
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet} from "react-router-dom";
 import logo from './media/logo.svg';
 import './style/App.css';
+import config from './config.js'
+import { useState } from 'react';
+import Dashboard from "./dashboard";
+
+const {adminCredentials} = config;
 
 function App() {
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    if (username === adminCredentials.username && password === adminCredentials.password) {
+      
+    } else {
+      alert("Wrong username or/and password!")
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
         <div className='log-reg-container'>
-          <form action="" method="get">
+
+          <form onSubmit={handleLogin}>
 
             <h3>Login</h3>
 
             <label htmlFor="username">Username</label>
-            <input type="username" name="username" id="Lusr" required />
+            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} name="username" id="Lusr" required />
 
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" id="Lpwd" required />  
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name="password" id="Lpwd" required />  
 
-            <NavLink to="/dashboard">Submit</NavLink>
+            <button id="login" type="submit">Login</button>           
 
           </form>
 

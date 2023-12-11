@@ -1,24 +1,9 @@
 import { Outlet} from "react-router-dom";
 import logo from './media/logo.svg';
 import './style/App.css';
-import config from './config.js'
-import { useState } from 'react';
-import Dashboard from "./dashboard";
-
-const {adminCredentials} = config;
 
 function App() {
 
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleLogin = () => {
-    if (username === adminCredentials.username && password === adminCredentials.password) {
-      
-    } else {
-      alert("Wrong username or/and password!")
-    }
-  };
 
   return (
     <div className="App">
@@ -27,15 +12,15 @@ function App() {
 
         <div className='log-reg-container'>
 
-          <form onSubmit={handleLogin}>
+          <form>
 
             <h3>Login</h3>
 
             <label htmlFor="username">Username</label>
-            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} name="username" id="Lusr" required />
+            <input type="text"  name="username" id="Lusr" required />
 
             <label htmlFor="password">Password</label>
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name="password" id="Lpwd" required />  
+            <input type="password" name="password" id="Lpwd" required />  
 
             <button id="login" type="submit">Login</button>           
 
